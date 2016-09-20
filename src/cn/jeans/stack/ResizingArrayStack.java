@@ -1,5 +1,7 @@
 package cn.jeans.stack;
-
+/*
+ * 使用数组实现栈
+ */
 import java.util.Iterator;
 
 public class ResizingArrayStack<E> implements Iterable<E>{

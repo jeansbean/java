@@ -1,5 +1,7 @@
 package cn.jeans.stack;
-
+/*
+ * 使用链表实现栈
+ */
 import java.util.Iterator;
 
 public class LinkedStack<E> implements Iterable{
