@@ -1,33 +1,35 @@
 package cn.jeans.tree;
-
+/*
+ * 二叉排序树（二叉查找树、二叉搜索树）：左子树的值均小于根节点的值，右子树的值均大于根节点的值
+ */
 public class BinaryTree {
 	 
-	 int data;      //根节点数据
-	 BinaryTree left;    //左子树
-	 BinaryTree right;   //右子树
-	 
-	 public BinaryTree(int data)    //实例化二叉树类
-	 {
-	  this.data = data;
-	  left = null;
-	  right = null;
-	 }
-	 
-	 public void insert(BinaryTree root,int data){     //向二叉树中插入子节点
-	  if(data>root.data)                               //二叉树的左节点都比根节点小
-	  {
-	   if(root.right==null){
-	    root.right = new BinaryTree(data);
-	   }else{
-	    this.insert(root.right, data);
-	   }
-	  }else{                                          //二叉树的右节点都比根节点大
-	   if(root.left==null){
-	    root.left = new BinaryTree(data);
-	   }else{
-	    this.insert(root.left, data);
-	   }
-	  }
-	 }
+	int data;
+	BinaryTree left;
+	BinaryTree right;
+	
+	public BinaryTree(int data){
+		this.data = data;
+		left = null;
+		right = null;
+	}
+	
+	public void insert(BinaryTree root,int data){
+		if(data>root.data){
+			if(root.right==null){
+				root.right = new BinaryTree(data);
+			}else{
+				this.right.insert(root.right, data);
+			}
+		}else if(data<root.data){
+			if(root.left==null){
+				root.left = new BinaryTree(data);
+			}else{
+				this.left.insert(root.left,data);
+			}
+		}else{
+			return;
+		}
+	}
 }
 	
