@@ -53,7 +53,7 @@ public class LinkedList {
 	
 	//打印节点
 	public void print(){
-		if(root!=null)
+		if(this.root!=null)
 			this.root.print();
 	}
 	//查找节点
