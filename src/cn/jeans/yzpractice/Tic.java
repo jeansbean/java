@@ -1,11 +1,11 @@
 package cn.jeans.yzpractice;
 
-public class Ticket implements Runnable{
+public class Tic implements Runnable{
 	public static void main(String[] args) {
-		Ticket tic = new Ticket();
-		Thread t1 = new Thread(tic);
-		Thread t2 = new Thread(tic);
-		Thread t3 = new Thread(tic);
+		Tic t = new Tic();
+		Thread t1 = new Thread(t);
+		Thread t2 = new Thread(t);
+		Thread t3 = new Thread(t);
 		
 		t1.start();
 		t2.start();
@@ -15,14 +15,15 @@ public class Ticket implements Runnable{
 	Object obj = new Object();
 	public void run(){
 		while(true){
-			synchronized(obj){
+			synchronized(obj){		
 				if(count>0){
 					try {
 						Thread.sleep(10);
 					} catch (Exception e) {
+						// TODO: handle exception
 						e.printStackTrace();
 					}
-					System.out.println(Thread.currentThread().getName()+"...remain"+count--);
+					System.out.println(Thread.currentThread().getName()+"remain:"+count--);
 				}
 			}
 		}
