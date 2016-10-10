@@ -51,6 +51,9 @@ public class CirQueue<E>{
 		return rear==front;
 	}
 	
+	
+	
+	
 	public static void main(String[] args) {
 		CirQueue<String> cqueue= new CirQueue<String>(4);
 		cqueue.enqueue("everything");

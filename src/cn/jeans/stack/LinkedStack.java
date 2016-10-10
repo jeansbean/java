@@ -18,6 +18,8 @@ public class LinkedStack<E> implements Iterable{
 	public int size(){
 		return N;
 	}
+	
+	//-----Attention--------------------------------------------------------------------------------------
 	public void push(E e){
 		Node oldfirst = first;
 		first = new Node();
@@ -31,6 +33,8 @@ public class LinkedStack<E> implements Iterable{
 		N--;
 		return e;
 	}
+	//-----Attention----------------------------------------------------------------------------------------
+	
 	public Iterator<E> iterator() {
 		return new ReverseIterator();
 	}

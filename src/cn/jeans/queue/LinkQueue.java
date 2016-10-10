@@ -24,7 +24,7 @@ public class LinkQueue<T>{
 		n.next = null;
 		front=rear=n;
 	}
-	
+	//------Attention----------------------------------------------------------------------------->>>>>
 	public void enqueue(T data){
 		Node s = new Node(data,null);
 		rear.next=s;
@@ -51,7 +51,7 @@ public class LinkQueue<T>{
 			return x;
 		}	
 	}
-	
+	//<<<<<------Attention-------------------------------------------------------------------------------
 	public int size(){
 		return size;
 	}
