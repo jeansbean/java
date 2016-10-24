@@ -1,5 +1,5 @@
 package cn.jeans.yzpractice;
-
+//线程操作同一个资源
 public class Ticket implements Runnable{
 	public static void main(String[] args) {
 		Ticket tic = new Ticket();
